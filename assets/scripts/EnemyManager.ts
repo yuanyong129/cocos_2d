@@ -1,9 +1,9 @@
-import { _decorator, Component, Prefab, Node, instantiate } from 'cc';
+import { _decorator, Component, Node, instantiate, Prefab } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('EnemyManager')
 export class EnemyManager extends Component {
-    @property(Prefab)
+    @property({ type: Prefab })
     enemy: Prefab = null;
     start() {
         const { x, y } = this.node.getPosition();
